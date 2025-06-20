@@ -4,7 +4,7 @@ import FrontWheel from "@/components/FrontWheel.vue";
 </script>
 
 <template>
-  <h1>component.vue</h1>
+  <h1>Component.vue</h1>
   
   <div>
     <FrontWheel></FrontWheel>

@@ -10,16 +10,18 @@ const props = defineProps({
 </script>
 
 <template>
-  <!--  :style 이것은 vue 문법
+  <!--  :style ||:~~ 이건 vue 문법
     중괄호 2개 겹쳐져 있는 것은 콧수염(Mustache 템플릿  JS ``st) -->
   <!-- <div :style="{color: props.color}">{{props.color || `BLACK`}} TIRE</div>  -->
   <!-- 객체를 이용해서 style을 주고 싶으면 : 를 사용해야함 : 없으면 문자열 밖에 못보냄 -->
   <!-- :stlye은 객체라고 보면 되죠 key = color , value = props.color라고 보면됩니다 키명은 카멜케이스 -->
 
   <div :style="{ color: props.color }">{{ props.color || `Black` }} Tire</div>
-  <div style="background-color: blue; color: #fff;" > Black Tire</div>
+  <div style="background-color: blue; color: #fff; border-radius: 30px; padding: 0 5px;" class="nana"  > Black Tire</div>
 
   <!-- mustache 템플릿에 값이 없으면 아무일도 안 일어남 js로 보면 undefined죠 -->
 </template>
 
-<style scoped></style>
+<style scoped>
+
+</style>
