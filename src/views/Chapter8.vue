@@ -1,0 +1,37 @@
+<script setup>
+import { onMounted, onUpdated, onUnmounted, reactive } from 'vue';
+
+//화면에 그려질때 딱 한번만 호출도니다.
+// 즉, 화면에 그려질 때 작업하고 싶은 내용이 있으면
+// onMounted 콜백 함수에 작성하면 된다. 
+// 보통은 통신처리 할때 사용
+onMounted(() =>{
+  console.log('컴포넌트가 마운트 됐다');
+});
+
+const state = reactive ({
+  message: 'Hello!'
+});
+
+onUpdated(() =>{
+  console.log('속성이 변경이 되었다면,');
+});
+
+onUnmounted(() =>{
+  alert('sarabada');
+});
+
+
+</script>
+
+<template>
+  <h1>Chapter8.vue</h1>
+  <div>{{ state.message }}</div>
+  <div>
+    <input type="text" v-model="state.message">
+  </div>
+</template>
+
+<style scoped>
+
+</style>
